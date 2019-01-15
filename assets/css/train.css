@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Sancreek');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/loco.jpg");
+    background-size: cover;
+    background-color: lightgray;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 0.9;
+}
+
+h1 {  /* Welcome to the Station */
+    font-family: Sancreek;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+h3 {  /*  All Aboard! */
+    font-family: Sancreek;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+h6 {  /* Current Time display */
+    font-family: Sancreek;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 3px;
+}
+
+.jumbotron {
+    background-image: url("../images/train.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    padding-bottom: 40px;
+    opacity: 0.8;
+}
+  
+.text-right {  /* Welcome to the Station */
+    color: #860303;
+    font-size: 1.4rem;
+}
+
+.card {
+    background-color: #f9e8d2;
+}
+
+.align-left {  /* Current Time display */
+    float: left;
+    padding: 10px;
+    font-size: 1rem;
+    color: #860303;
+    width: 40%;
+}
+
+.align-right {  /*  All Aboard! */
+    float: left;
+    color: #860303;
+    font-size: 1.2rem;
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+.card-title2 {  /*  Add Train */
+    color: #860303;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.card-body {
+    background-color: white;
+    color: black;
+}
+
+.table-responsive {
+    background-color: white;
+    color: black;
+}
+
+button {
+    background: transparent;
+    border: none !important;
+}
+
+label {
+    font-weight: bold;
+}
+
+html {
+    font-size: .47rem;
+}
+
+@media (min-width: 760px) {
+    html {
+        font-size: .8rem;
+    }
+
+    .jumbotron {
+        padding-bottom: 160px;
+    }
+
+    .text-right {
+        font-size: 2rem;
+    }
+
+    .align-right,
+    .card-title2 {
+        font-size: 1.4rem;
+        padding: 5px 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: .8rem;
+    }
+
+    .jumbotron {
+        padding-bottom: 240px;
+    }
+
+    .text-right {
+        font-size: 2.9rem;
+    }
+
+    .align-right,
+    .card-title2 {
+        font-size: 1.5rem;
+        padding: 8px 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: .9rem;
+    }
+
+    .jumbotron {
+        padding-bottom: 300px;
+    }
+
+    .text-right {
+        font-size: 3.1rem;
+    }
+
+    .align-right,
+    .card-title2 {
+        font-size: 1.6rem;
+        padding: 10px 30px;
+    }
+}

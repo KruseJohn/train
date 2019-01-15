@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheduler</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/train.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-right">Welcome To The Station</h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <!-- Current Schedule -->
+        <div class="card">
+          <div class="container p-0">
+            <div class="align-left">
+              <h6 id="current-time"></h6>
+            </div>
+            <div class="align-right">
+              <h3>All Aboard!</h3>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th>Frequency (min)</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="add-row">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <!-- Add Train  -->
+        <div class="card">
+          <h3 class="card-title2">Add Train</h3>
+          <div class="card-body">
+            <!-- Entry Form -->
+            <form>
+              <div class="form-group">
+                <label for="text">Train Name</label>
+                <input type="text" class="form-control" id="train-name-input">
+              </div>
+              <div class="form-group">
+                <label for="text">Destination</label>
+                <input type="text" class="form-control" id="destination-input">
+              </div>
+              <div class="form-group">
+                <label for="text">First Train Time (HH:mm - military time)</label>
+                <input type="text" class="form-control" id="train-time-input">
+              </div>
+              <div class="form-group">
+                <label for="text">Frequency (min)</label>
+                <input type="text" class="form-control" id="frequency-input">
+              </div>
+              <button class="btn btn-success" id="add-train" type="submit" style="background-color: darkred;">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Moment JS link -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- Firebasejs link-->
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+
+  <!-- SweetAlert2 link-->
+  <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.js"></script>
+
+  <!-- My javascript link-->
+  <script src="assets/javascript/train.js"></script>
+
+
+</body>
+
+</html>
