@@ -2,14 +2,11 @@ $(document).ready(function () {
 
     var index = 0;
 
-    $("#current-time").text(moment().format("h:mm:ss a"));
-
     //  Running clock with seconds displayed
     setInterval(function () {
-
         $("#current-time").text(moment().format("h:mm:ss a"));
-        
     }, 1000);
+
 
     // Initialize Firebase
     var config = {
@@ -107,7 +104,7 @@ $(document).ready(function () {
         console.log(minutesAway + " minutes away");
         console.log(nextArrival + " is the next arrival time");
 
-        //  Add calculated data to html table         
+        //  Add calculated data to html train table         
         var newRow = $("<tr>");
         newRow.addClass("row-" + index);
         var data1 = $("<td>").text(childSnapshot.val().name);
@@ -133,7 +130,8 @@ $(document).ready(function () {
     }, function (errorObject) {
         console.log("Errors handled: " + errorObject.code);
 
-    }); //  end of database.ref function(childSnapshot)
+    }); //  end of database.ref function(childSnapshot)  
+
 
     // Remove Train button function
     $(document).on("click", ".removeTrain", function () {
@@ -153,16 +151,17 @@ $(document).ready(function () {
 
         }).then((result) => {
             if (result.value) {
-                swal(
+                Swal(
                     'Deleted!',
                     'Your train has been deleted.',
                     'success'
-                )
-            }
+                ) 
+            } 
+
             $(".row-" + $(this).attr("data-index")).remove();
             database.ref().child($(this).attr("data-key")).remove();
-
-        }); //  end of alert
+          
+        }); //  end of alert  
 
     }); //  end of remove train function
 
