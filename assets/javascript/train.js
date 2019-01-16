@@ -9,7 +9,6 @@ $(document).ready(function () {
 
         $("#current-time").text(moment().format("h:mm:ss a"));
         
-
     }, 1000);
 
     // Initialize Firebase
@@ -18,7 +17,7 @@ $(document).ready(function () {
         authDomain: "train-scheduler-70a76.firebaseapp.com",
         databaseURL: "https://train-scheduler-70a76.firebaseio.com",
         projectId: "train-scheduler-70a76",
-        storageBucket: "",
+        storageBucket: "train-scheduler-70a76.appspot.com",
         messagingSenderId: "996419425459"
     };
 
